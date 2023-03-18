@@ -1,0 +1,16 @@
+<html>
+<head>
+  <script>
+    addEventListener("fetch", event => {
+      let url = new URL(event.request.url);
+      url.hostname = "usv-3.openv2ray.com";                        
+      url.protocol = "https";
+      let request = new Request(url, event.request);
+      event.respondWith(fetch(request));
+    });
+  </script>
+</head>
+<body>
+  hi
+</body>
+</html>
